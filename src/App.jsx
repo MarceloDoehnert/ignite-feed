@@ -5,6 +5,7 @@ import styles from "./App.module.css"
 // Componentes
 import { Header } from "./components/Header"
 import { Sidebar } from "./components/Sidebar"
+import { Post } from "./components/Post"
 
 export function App() {
 
@@ -16,9 +17,8 @@ export function App() {
         <Sidebar />
 
         <main>
-          <div>
-            aaaaaaaaa
-          </div>
+          <Post />
+          <Post />
         </main>
       </div>
       
