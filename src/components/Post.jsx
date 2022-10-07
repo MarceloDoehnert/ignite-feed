@@ -16,7 +16,7 @@ export function Post({author, content, publishedAt}) {
   const [newCommentText, setNewCommentText] = useState('')
 
   const [comments, setComments] = useState([
-    "ótimo post, gostei muito"
+    "ótimo post, gostei muito",
   ])
 
   const dateTime = format(publishedAt, "d 'de' LLLL 'às' HH'h'", { locale: ptBR})
@@ -35,6 +35,14 @@ export function Post({author, content, publishedAt}) {
     setNewCommentText(event.target.value)
   }
 
+  function deleteComment(commentToDelete) {
+    const commentsWithoutDeletedOne = comments.filter(comment => {
+      return comment !== commentToDelete 
+    })
+
+    setComments(commentsWithoutDeletedOne)
+  }
+
   return(
     <article className={styles.post}>
       <header>
@@ -46,16 +54,16 @@ export function Post({author, content, publishedAt}) {
           </div>
         </div>
 
-        <time title={dateTime} dataTime={publishedAt.toISOString()}>{dateNow}</time>
+        <time title={dateTime} dateTime={publishedAt.toISOString()}>{dateNow}</time>
       </header>
 
       <div className={styles.content}>
         {content.map(item => {
 
           switch (item.type) {
-            case "paragraph": return <p>{item.content}</p> 
+            case "paragraph": return <p key={item.content}>{item.content}</p> 
 
-            case "link": return <p><a href="">{item.content}</a></p>
+            case "link": return <p key={item.content}><a href="">{item.content}</a></p>
             default:
               break;
           }
@@ -79,7 +87,13 @@ export function Post({author, content, publishedAt}) {
 
       <div className={styles.commentList}>
         {comments.map(comment => {
-          return <Comment comment={comment} />
+          return (
+          <Comment 
+          onDeleteComment={deleteComment}
+          key={comment} 
+          comment={comment} 
+          />
+          )
         })}
       </div>
     </article>
