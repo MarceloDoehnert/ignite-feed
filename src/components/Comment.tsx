@@ -5,7 +5,12 @@ import styles from './Comment.module.css'
 // Hooks
 import { useState } from 'react'
 
-export function Comment ({comment, onDeleteComment}) {
+interface CommentProps {
+  comment: string;
+  onDeleteComment: (comments: string) => void;
+}
+
+export function Comment ({comment, onDeleteComment}: CommentProps) {
 
   const [likeCount, setLikeCount] = useState(0)
 
@@ -21,14 +26,14 @@ export function Comment ({comment, onDeleteComment}) {
 
   return (
     <div className={styles.comment}>
-      <Avatar hasBorder={false} src="https://avatars.githubusercontent.com/u/59656981?v=4" />
+      <Avatar hasBorder={false} src="https://avatars.githubusercontent.com/u/59656981?v=4" alt="" />
 
       <div className={styles.commentBox}>
         <div className={styles.commentContent}>
           <header>
             <div className={styles.authorAndTime}>
               <strong>Marcelo Dochenert Cordeiro</strong>
-              <time title="27 de Setembro às 20:00h" dataTime="2022-09-27 20:00:45">Cerca de 1h atrás</time>
+              <time title="27 de Setembro às 20:00h" dateTime="2022-09-27 20:00:45">Cerca de 1h atrás</time>
             </div>
 
             <button onClick={handleDeleteComment} title="Deleter comentário">
