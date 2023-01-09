@@ -13,28 +13,28 @@ const post = [
     author: {
       avatarUrl: "https://github.com/mateus-dias-cwb.png",
       name: "Mateus Dias",
-      role: "Web Developer" 
+      role: "Dev Front-end" 
     },
     content : [
       {type: "paragraph", content: "Fala galeraa 👋", },
       {type: "paragraph", content: "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀", },
-      {type: "link", content: "jane.design/doctorcare", }, 
+      {type: "link", content: "👉 mateus.design/doctorcare", }, 
     ],
-    publishedAt: new Date("2022-10-04 20:35:47")
+    publishedAt: new Date("2023-01-01 20:35:47")
   },
   {
     id: 2,
     author: {
-      avatarUrl: "https://github.com/MarceloDoehnert.png",
+      avatarUrl: "https://images.unsplash.com/photo-1618077360395-f3068be8e001?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
       name: "Carlos Viana",
-      role: "Web Developer" 
+      role: "Dev Front-end" 
     },
     content : [
-      {type: "paragraph", content: "Fala galeraa 👋", },
-      {type: "paragraph", content: "Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀", },
-      {type: "link", content: "jane.design/doctorcare", }, 
+      {type: "paragraph", content: "Fala pessoal 👋", },
+      {type: "paragraph", content: "Finalmente finalizei meu novo site/portfólio. Foi um baita desafio criar todo o design e codar na unha, mas consegui 💪🏻", },
+      {type: "link", content: "👉 carlosviana.design", }, 
     ],
-    publishedAt: new Date("2022-10-01 13:45:47")
+    publishedAt: new Date("2023-01-03 13:45:47")
   },
 ]
 
