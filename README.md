@@ -18,6 +18,7 @@
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [React](https://reactjs.org)
+- [Typescript](https://www.typescriptlang.org)
 - [Vite](https://vitejs.dev)
 
 ## 💻 Projeto
